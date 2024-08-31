@@ -1,0 +1,35 @@
+{
+  "type": "record",
+  "name": "ProductAvroModel",
+  "namespace": "com.microservices.demo.kafka.avro.model",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "pName",
+      "type": "string"
+    },
+    {
+      "name": "pCategory",
+      "type": "string"
+    },
+    {
+      "name": "quantity",
+      "type": "string"
+    },
+    {
+      "name": "quality",
+      "type": "string"
+    },
+    {
+      "name": "company",
+      "type": "string"
+    },
+    {
+      "name": "pOrigin",
+      "type": "string"
+    }
+  ]
+}
