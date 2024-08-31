@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: product-to-kafka-service
+  profiles:
+    active: local
+  cloud:
+    config:
+      name: product-to-kafka-service,config-client
+      uri: http://localhost:8888

@@ -42,8 +42,6 @@ aproduct-to-kafka-service/src/main/java/com/microservices/demo/product/service/P
 gproduct-to-kafka-service/src/main/java/com/microservices/demo/product/controller/ProductController.java,7/c/7ca14e443bde29008d0c91e6756b6bb068a6dd9a
 ‘
 aproduct-to-kafka-service/src/main/java/com/microservices/demo/product/init/StreamInitializer.java,5/f/5f4d37e4cc1d0d03e4f6156de63b43df480f9155
-“
-cproduct-to-kafka-service/src/main/java/com/microservices/demo/ProductToKafkaServiceApplication.java,0/1/01196050ee16273b9f77ca7d86bc7c77da0a7ef9
 —
 gproduct-to-kafka-service/src/test/java/com/microservices/demo/ProductToKafkaServiceApplicationTest.java,8/b/8b4d337ab4db9daf07fa31113986392b8556c190
 –

@@ -44,8 +44,6 @@ gproduct-to-kafka-service/src/main/java/com/microservices/demo/product/controlle
 aproduct-to-kafka-service/src/main/java/com/microservices/demo/product/init/StreamInitializer.java,5/f/5f4d37e4cc1d0d03e4f6156de63b43df480f9155
 —
 gproduct-to-kafka-service/src/test/java/com/microservices/demo/ProductToKafkaServiceApplicationTest.java,8/b/8b4d337ab4db9daf07fa31113986392b8556c190
-“
-cproduct-to-kafka-service/src/main/java/com/microservices/demo/ProductToKafkaServiceApplication.java,0/1/01196050ee16273b9f77ca7d86bc7c77da0a7ef9
 –
 fkafka/kafka-admin/src/main/java/com/microservices/demo/kafka/admin/config/client/KafkaAdminClient.java,e/4/e494238d05cc42f1c81825cd26942bfe475d50f1
 €

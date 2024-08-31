@@ -19,3 +19,7 @@ we need to define a schema in resource >avro in kafka-model ,when be compile it 
 6. Create a kafka adminconfig and webclientconfig and kafkaAdmin client.
 7. Commented in KafkaProducerConfig as snappy compression is not compatable with mac.
    //props.put(ProducerConfig.COMPRESSION_TYPE_CONFIG, kafkaProducerConfigData.getCompressionType());
+8. Dockerization is Pending (Need to add the maven plugin to support Dockerization. SECTION 3 Lecture 20)
+9. Create a directory name config-server-repository
+10. add the yml file for the configuration and use git init and add all file using git add . and commit the changes using git commit
+-am "{message}"
