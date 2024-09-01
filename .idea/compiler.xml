@@ -11,9 +11,11 @@
         <module name="config-server" />
         <module name="app-config-data" />
         <module name="kafka-model" />
+        <module name="kafka-consumer" />
         <module name="kafka" />
         <module name="kafka-producer" />
         <module name="common-config" />
+        <module name="kafka-to-elastic-service" />
         <module name="product-to-kafka-service" />
       </profile>
     </annotationProcessing>
@@ -28,8 +30,10 @@
       <module name="config-server" options="-parameters" />
       <module name="kafka" options="-parameters" />
       <module name="kafka-admin" options="-parameters" />
+      <module name="kafka-consumer" options="-parameters" />
       <module name="kafka-model" options="-parameters" />
       <module name="kafka-producer" options="-parameters" />
+      <module name="kafka-to-elastic-service" options="-parameters" />
       <module name="microservices-demo" options="-parameters" />
       <module name="microservices.demo" options="-parameters" />
       <module name="product-to-kafka-service" options="-parameters" />
