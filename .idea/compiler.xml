@@ -15,11 +15,12 @@
         <module name="kafka" />
         <module name="kafka-producer" />
         <module name="common-config" />
-        <module name="kafka-to-elastic-service" />
+        <module name="kafka-to-elastic-product" />
         <module name="product-to-kafka-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="kafka-to-elastic-service" target="11" />
       <module name="microservices.demo" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -33,6 +34,7 @@
       <module name="kafka-consumer" options="-parameters" />
       <module name="kafka-model" options="-parameters" />
       <module name="kafka-producer" options="-parameters" />
+      <module name="kafka-to-elastic-product" options="-parameters" />
       <module name="kafka-to-elastic-service" options="-parameters" />
       <module name="microservices-demo" options="-parameters" />
       <module name="microservices.demo" options="-parameters" />

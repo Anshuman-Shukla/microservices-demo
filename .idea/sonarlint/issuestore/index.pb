@@ -28,8 +28,6 @@ G
 ]kafka/kafka-model/src/main/java/com/microservices/demo/kafka/avro/model/ProductAvroModel.java,c/2/c2dff71d7be42a5ed93b14c204c8fb2b79102791
 ö
 jkafka/kafka-producer/src/main/java/com/microservices/demo/kafka/producer/config/service/KafkaProducer.java,e/c/ec859a80e62b90aaaab4491a04080f797dee422e
-®
-xkafka/kafka-producer/src/main/java/com/microservices/demo/kafka/producer/config/service/impl/ProductToKafkaProducer.java,3/a/3add64243cb42455d700d760c24b0fea1f6375d8
 L
 kafka/kafka-producer/pom.xml,2/1/21d3737976b159641a1bc9e261786473612cbdd2
 à
@@ -56,3 +54,33 @@ Qcommon-config/src/main/java/com/microservices/demo/common/config/RetryConfig.ja
 fkafka/kafka-admin/src/main/java/com/microservices/demo/kafka/admin/config/config/KafkaAdminConfig.java,1/2/1201c82aaee9bef3a9e6fa34a5e4af51c39bec11
 ò
 hkafka/kafka-producer/src/main/java/com/microservices/demo/kafka/producer/config/KafkaProducerConfig.java,d/1/d18432d9f5b1f0d73ca3cbaedb6597be3b11dbc3
+õ
+kproduct-to-kafka-service/src/main/java/com/microservices/demo/product/init/impl/KafkaStreamInitializer.java,c/d/cd8f4e770f7f7e1a1f9cca34468f4bb5702f9faa
+ì
+cproduct-to-kafka-service/src/main/java/com/microservices/demo/ProductToKafkaServiceApplication.java,0/1/01196050ee16273b9f77ca7d86bc7c77da0a7ef9
+ç
+]config-server/src/main/java/com/microservices/demo/config/server/ConfigServerApplication.java,7/6/763f152704c7d70c8f377b567f05ac1469f318c4
+Z
+*config-server-repository/config-client.yml,8/6/866ca0d8fa69a44af5c17fc50decba8d45a06fbc
+E
+config-server/pom.xml,a/2/a2f9618c8ad821b143a07a29a9805fcb0b2df470
+à
+Xapp-config-data/src/main/java/com/microservices/demo/config/KafkaConsumerConfigData.java,a/1/a1406b659852dc2537549618d5addef45096cf88
+L
+kafka/kafka-consumer/pom.xml,b/b/bb0ac2c9c0a192faab0883db484dbfbdcc36b6f9
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+P
+ product-to-kafka-service/pom.xml,f/8/f87cc26a1903f6fd54d616990cf53c80c6328329
+P
+ kafka-to-elastic-product/pom.xml,8/a/8a04192fa75ae73470e313e099d70a26b93686e0
+ù
+mkafka-to-elastic-product/src/main/java/com/microservices/demo/kafka/to/elastic/KafkaToElasticApplication.java,9/f/9fb97d98585c19cab0a52aa21d1d048e16bd5690
+P
+ docker-compose/kafka_cluster.yml,4/3/430079e5fef8893093d3aae5d3d60670403848cc
+ö
+jkafka-to-elastic-product/src/main/java/com/microservices/demo/kafka/to/elastic/consumer/KafkaConsumer.java,d/a/daaea065e6346436a5f2e93eec319623efa93970
+®
+xkafka/kafka-producer/src/main/java/com/microservices/demo/kafka/producer/config/service/impl/ProductToKafkaProducer.java,3/a/3add64243cb42455d700d760c24b0fea1f6375d8
+í
+bkafka/kafka-consumer/src/main/java/com/microservices/demo/consumer/config/KafkaConsumerConfig.java,0/e/0eb50c3f35c1fa4241f0c75c869c557bdf514244

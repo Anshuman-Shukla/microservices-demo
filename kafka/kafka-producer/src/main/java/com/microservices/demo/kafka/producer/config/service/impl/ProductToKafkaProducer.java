@@ -31,6 +31,7 @@ public class ProductToKafkaProducer implements KafkaProducer<Long, ProductAvroMo
         ListenableFuture<SendResult<Long, ProductAvroModel>> kafkaResultFuture =
                 kafkaTemplate.send(topicName, key, message);
         addCallback(topicName, message, kafkaResultFuture);
+        LOG.info("Message Sent ='{}' to topic='{}'", message, topicName);
     }
 
     @PreDestroy
@@ -52,7 +53,7 @@ public class ProductToKafkaProducer implements KafkaProducer<Long, ProductAvroMo
             @Override
             public void onSuccess(SendResult<Long, ProductAvroModel> result) {
                     RecordMetadata metadata = result.getRecordMetadata();
-                    LOG.debug("Received new metadata. Topic: {}; Partition {}; Offset {}; Timestamp {}, at time {}",
+                    LOG.info("Received new metadata. Topic: {}; Partition {}; Offset {}; Timestamp {}, at time {}",
                             metadata.topic(),
                             metadata.partition(),
                             metadata.offset(),

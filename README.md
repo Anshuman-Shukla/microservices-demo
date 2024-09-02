@@ -7,6 +7,12 @@ app-config-data to keep all the config data classes at one point.
 Then created a docker-compose folder to run the kafka in docker
 
         docker-compose -f common.yml -f kafka_cluster.yml up
+To check if cluster is read we can use
+      kcat -L -b localhost:19092
+
+To concume from kafka        
+    kcat -C -b localhost:19092 -t twitter-topic
+
 
       check if cluster is ready kafkacat -L -b localhost:19092
 2. Kafka-Model we are using Avro: To create the model using AVro 
@@ -23,3 +29,4 @@ we need to define a schema in resource >avro in kafka-model ,when be compile it 
 9. Create a directory name config-server-repository
 10. add the yml file for the configuration and use git init and add all file using git add . and commit the changes using git commit
 -am "{message}"
+11. added the kafka-consumer service.
