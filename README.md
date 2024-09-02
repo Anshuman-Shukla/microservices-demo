@@ -30,3 +30,5 @@ we need to define a schema in resource >avro in kafka-model ,when be compile it 
 10. add the yml file for the configuration and use git init and add all file using git add . and commit the changes using git commit
 -am "{message}"
 11. added the kafka-consumer service.
+12. Added the elastic in docker compose
+13. 

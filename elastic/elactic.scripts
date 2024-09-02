@@ -1,0 +1,41 @@
+curl --location --request PUT 'localhost:9200/product-index' \
+--header 'Content-Type: application/json' \
+--data '{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "createdAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd'\''T'\''HH:mm:ssZZ"
+      },
+      "pName": {
+        "type": "text"
+      },
+      "pCategory": {
+        "type": "text"
+      },
+      "quantity": {
+        "type": "integer"
+      },
+      "quality": {
+        "type": "text"
+      },
+      "company": {
+        "type": "text"
+      },
+      "pOrigin": {
+        "type": "text"
+      }
+    }
+  }
+}'
+
+#####

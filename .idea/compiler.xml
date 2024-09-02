@@ -7,16 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="elastic-index-client" />
+        <module name="elastic-config" />
+        <module name="kafka-model" />
+        <module name="kafka-consumer" />
+        <module name="kafka-producer" />
+        <module name="kafka-to-elastic-product" />
+        <module name="product-to-kafka-service" />
         <module name="kafka-admin" />
         <module name="config-server" />
         <module name="app-config-data" />
-        <module name="kafka-model" />
-        <module name="kafka-consumer" />
         <module name="kafka" />
-        <module name="kafka-producer" />
         <module name="common-config" />
-        <module name="kafka-to-elastic-product" />
-        <module name="product-to-kafka-service" />
+        <module name="elastic" />
+        <module name="elastic-model" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -29,6 +33,10 @@
       <module name="app-config-data" options="-parameters" />
       <module name="common-config" options="-parameters" />
       <module name="config-server" options="-parameters" />
+      <module name="elastic" options="-parameters" />
+      <module name="elastic-config" options="-parameters" />
+      <module name="elastic-index-client" options="-parameters" />
+      <module name="elastic-model" options="-parameters" />
       <module name="kafka" options="-parameters" />
       <module name="kafka-admin" options="-parameters" />
       <module name="kafka-consumer" options="-parameters" />

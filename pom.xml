@@ -24,6 +24,10 @@
 		<module>config-server</module>
 		<module>kafka/kafka-consumer</module>
 		<module>kafka-to-elastic-product</module>
+        <module>elastic</module>
+		<module>elastic/elastic-config</module>
+		<module>elastic/elastic-model</module>
+		<module>elastic/elastic-index-client</module>
 
 	</modules>
 	<packaging>pom</packaging>
@@ -78,6 +82,21 @@
 			<dependency>
 				<groupId>com.microservices.demo</groupId>
 				<artifactId>kafka-consumer</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.microservices.demo</groupId>
+				<artifactId>elastic-model</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.microservices.demo</groupId>
+				<artifactId>elastic-config</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.microservices.demo</groupId>
+				<artifactId>elastic-index-client</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<!--LOCAL END -->
@@ -182,6 +201,22 @@
 						<artifactId>junit-vintage-engine</artifactId>
 					</exclusion>
 				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.elasticsearch</groupId>
+				<artifactId>elasticsearch</artifactId>
+				<version>${elastic.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.elasticsearch.client</groupId>
+				<artifactId>elasticsearch-rest-high-level-client</artifactId>
+				<version>${elastic.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

@@ -1,9 +1,12 @@
 package com.microservices.demo.kafka.to.elastic.consumer.impl;
 
 import com.microservices.demo.config.KafkaConfigData;
+import com.microservices.demo.elastic.index.client.service.ElasticIndexClient;
+import com.microservices.demo.elastic.model.index.impl.ProductIndexModel;
 import com.microservices.demo.kafka.admin.config.client.KafkaAdminClient;
 import com.microservices.demo.kafka.avro.model.ProductAvroModel;
 import com.microservices.demo.kafka.to.elastic.consumer.KafkaConsumer;
+import com.microservices.demo.kafka.to.elastic.transformer.AvroToElasticModelTransformer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
@@ -26,11 +29,16 @@ public class ProductKafkaConsumer implements KafkaConsumer<Long, ProductAvroMode
     private final KafkaAdminClient kafkaAdminClient;
 
     private final KafkaConfigData kafkaConfigData;
+    private final AvroToElasticModelTransformer avroToElasticModelTransformer;
 
-    public ProductKafkaConsumer(KafkaListenerEndpointRegistry kafkaListenerEndpointRegistry, KafkaAdminClient kafkaAdminClient, KafkaConfigData kafkaConfigData) {
+    private final ElasticIndexClient<ProductIndexModel> elasticIndexClient;
+
+    public ProductKafkaConsumer(KafkaListenerEndpointRegistry kafkaListenerEndpointRegistry, KafkaAdminClient kafkaAdminClient, KafkaConfigData kafkaConfigData, AvroToElasticModelTransformer avroToElasticModelTransformer, ElasticIndexClient<ProductIndexModel> elasticIndexClient) {
         this.kafkaListenerEndpointRegistry = kafkaListenerEndpointRegistry;
         this.kafkaAdminClient = kafkaAdminClient;
         this.kafkaConfigData = kafkaConfigData;
+        this.avroToElasticModelTransformer = avroToElasticModelTransformer;
+        this.elasticIndexClient = elasticIndexClient;
     }
     @EventListener
     public void onAppStarted(ApplicationStartedEvent event) {
@@ -51,5 +59,16 @@ public class ProductKafkaConsumer implements KafkaConsumer<Long, ProductAvroMode
                 partitions.toString(),
                 offsets.toString(),
                 Thread.currentThread().getId());
+        try{
+            saveKafkaProductDataToElastic(messages);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+    private void saveKafkaProductDataToElastic(List<ProductAvroModel> messages){
+        List<ProductIndexModel> productIndexModels = avroToElasticModelTransformer.getElasticModels(messages);
+        List<String> savedDocumentIds = elasticIndexClient.save(productIndexModels);
+        LOG.info("Documents saved to elasticsearch with ids {}", savedDocumentIds.toArray());
     }
 }
